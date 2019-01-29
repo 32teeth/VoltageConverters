@@ -183,11 +183,6 @@
 U1 - MCP1642B
 C1 - EEE-1EA100SR - 10uF
 C2 - EEE-1EA100SR - 10uF</text>
-<circle x="14.5" y="32" radius="1" width="0.3048" layer="21"/>
-<wire x1="14" y1="32" x2="15" y2="32" width="0.3048" layer="21"/>
-<wire x1="14.5" y1="31.5" x2="14.5" y2="32.5" width="0.3048" layer="21"/>
-<circle x="2" y="32" radius="1" width="0.3048" layer="21"/>
-<wire x1="1.5" y1="32" x2="2.5" y2="32" width="0.3048" layer="21"/>
 </plain>
 <libraries>
 <library name="rcl">
