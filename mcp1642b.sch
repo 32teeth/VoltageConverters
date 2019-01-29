@@ -11029,11 +11029,12 @@ Two pin, compact surface mount connector. Commonly used as a battery input conne
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="SW" class="0">
 <segment>
 <pinref part="U11" gate="G$1" pin="SW"/>
 <pinref part="L1" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="35.56" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
+<label x="40.64" y="35.56" size="1.016" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="V_BATT" class="0">
