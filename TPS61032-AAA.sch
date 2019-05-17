@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -55,6 +55,8 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="7" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -1262,62 +1264,6 @@
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="adafruit" urn="urn:adsk.eagle:library:420">
-<packages>
-<package name="12BH412" urn="urn:adsk.eagle:footprint:6240002/1" library_version="2">
-<wire x1="-20" y1="4.5" x2="-20" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="18.5" y1="-4.5" x2="18.5" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="18.5" y1="-1.5" x2="20" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="20" y1="-1.5" x2="20" y2="1.5" width="0.127" layer="21"/>
-<wire x1="20" y1="1.5" x2="18.5" y2="1.5" width="0.127" layer="21"/>
-<wire x1="18.5" y1="1.5" x2="18.5" y2="4.5" width="0.127" layer="21"/>
-<pad name="-" x="-22.5" y="0" drill="1" diameter="2.54"/>
-<pad name="+" x="22.5" y="0" drill="1" diameter="2.54"/>
-<text x="-5.08" y="-1.27" size="2.54" layer="25" font="vector">&gt;NAME</text>
-</package>
-</packages>
-<packages3d>
-<package3d name="12BH412" urn="urn:adsk.eagle:package:6240648/1" type="box" library_version="2">
-<packageinstances>
-<packageinstance name="12BH412"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="AAA" urn="urn:adsk.eagle:symbol:6239499/1" library_version="2">
-<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<text x="-7.62" y="5.08" size="1.778" layer="95" font="vector">&gt;NAME</text>
-<pin name="-" x="-7.62" y="0" visible="off" length="middle"/>
-<pin name="+" x="5.08" y="0" visible="off" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="AAA" urn="urn:adsk.eagle:component:6240966/1" prefix="BATT" library_version="2">
-<description>&lt;b&gt;AAA PC pin holder&lt;/b&gt;
-&lt;p&gt;
-Mouser part #12BH412 - but pretty much any 1x AAA battery holder should be the same 
-&lt;p&gt;http://www.ladyada.net/library/pcb/eaglelibrary.html&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="AAA" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="12BH412">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:6240648/1"/>
-</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -2589,6 +2535,62 @@ part number 2062-2P from STA</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="aaa">
+<packages>
+<package name="BAT_HLDR_2468">
+<pad name="GND" x="23.622" y="6.35" drill="1.016" diameter="1.524"/>
+<pad name="VCC" x="23.622" y="-6.35" drill="1.016" diameter="1.524"/>
+<wire x1="-26.4922" y1="-12.2936" x2="26.4922" y2="-12.2936" width="0.1524" layer="21"/>
+<wire x1="26.4922" y1="-12.2936" x2="26.4922" y2="12.2936" width="0.1524" layer="21"/>
+<wire x1="26.4922" y1="12.2936" x2="-26.4922" y2="12.2936" width="0.1524" layer="21"/>
+<wire x1="-26.4922" y1="12.2936" x2="-26.4922" y2="-12.2936" width="0.1524" layer="21"/>
+<wire x1="-26.4922" y1="-12.2936" x2="26.4922" y2="-12.2936" width="0.1524" layer="51"/>
+<wire x1="26.4922" y1="-12.2936" x2="26.4922" y2="12.2936" width="0.1524" layer="51"/>
+<wire x1="26.4922" y1="12.2936" x2="-26.4922" y2="12.2936" width="0.1524" layer="51"/>
+<wire x1="-26.4922" y1="12.2936" x2="-26.4922" y2="-12.2936" width="0.1524" layer="51"/>
+<text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>
+<circle x="-14.986" y="2.3368" radius="1.9812" width="0.127" layer="20"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BATT_HLDR">
+<pin name="VCC" x="2.54" y="-2.54" visible="pin" length="short" direction="pas"/>
+<pin name="GND" x="11.43" y="-2.54" visible="pin" length="short" direction="pas" rot="R180"/>
+<wire x1="2.54" y1="-2.54" x2="5.08" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="5.08" y1="-1.27" x2="5.08" y2="-3.81" width="0.2032" layer="94"/>
+<wire x1="6.35" y1="0" x2="6.35" y2="-5.08" width="0.2032" layer="94"/>
+<wire x1="7.62" y1="-1.27" x2="7.62" y2="-3.81" width="0.2032" layer="94"/>
+<wire x1="11.43" y1="-2.54" x2="8.89" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="3.3528" y1="-3.7592" x2="3.9878" y2="-3.7592" width="0.2032" layer="94"/>
+<wire x1="8.89" y1="0" x2="8.89" y2="-5.08" width="0.2032" layer="94"/>
+<wire x1="3.683" y1="-4.064" x2="3.683" y2="-3.429" width="0.2032" layer="94"/>
+<wire x1="9.906" y1="-3.683" x2="10.541" y2="-3.683" width="0.2032" layer="94"/>
+<text x="-0.2794" y="5.08" size="3.4798" layer="95" ratio="10" rot="SR0">&gt;Name</text>
+<text x="-1.7526" y="-8.89" size="3.4798" layer="96" ratio="10" rot="SR0">&gt;Value</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="2468" prefix="U">
+<gates>
+<gate name="A" symbol="BATT_HLDR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BAT_HLDR_2468">
+<connects>
+<connect gate="A" pin="GND" pad="GND"/>
+<connect gate="A" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER_PART_NUMBER" value="2468" constant="no"/>
+<attribute name="VENDOR" value="SILICON LABS" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2619,10 +2621,9 @@ part number 2062-2P from STA</description>
 <part name="L1" library="mw-wurth" deviceset="L" device="WE-HCI-13MM" value="8.2uH"/>
 <part name="U$9" library="mw-schematic" deviceset="VCC" device=""/>
 <part name="U$10" library="mw-schematic" deviceset="VCC" device=""/>
-<part name="BAT" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="AAA" device="" package3d_urn="urn:adsk.eagle:package:6240648/1"/>
 <part name="C4" library="mw-passive" deviceset="C" device="0603" value="100nF"/>
-<part name="BAT1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="AAA" device="" package3d_urn="urn:adsk.eagle:package:6240648/1"/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="PTH4" package3d_urn="urn:adsk.eagle:package:38054/1"/>
+<part name="U1" library="aaa" deviceset="2468" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2679,19 +2680,12 @@ part number 2062-2P from STA</description>
 </instance>
 <instance part="U$9" gate="G$1" x="119.38" y="99.06"/>
 <instance part="U$10" gate="G$1" x="30.48" y="50.8"/>
-<instance part="BAT" gate="G$1" x="2.54" y="81.28" smashed="yes" rot="R90">
-<attribute name="NAME" x="12.7" y="76.2" size="1.27" layer="95" rot="R90"/>
-<attribute name="VALUE" x="15.24" y="76.2" size="1.27" layer="96" rot="R90"/>
-</instance>
 <instance part="C4" gate="G$1" x="127" y="78.74" smashed="yes">
 <attribute name="NAME" x="123.444" y="81.661" size="1.27" layer="95"/>
 <attribute name="VALUE" x="128.524" y="81.661" size="1.27" layer="96"/>
 </instance>
-<instance part="BAT1" gate="G$1" x="2.54" y="68.58" smashed="yes" rot="R90">
-<attribute name="NAME" x="12.7" y="63.5" size="1.27" layer="95" rot="R90"/>
-<attribute name="VALUE" x="15.24" y="63.5" size="1.27" layer="96" rot="R90"/>
-</instance>
 <instance part="J1" gate="G$1" x="152.4" y="78.74" rot="R180"/>
+<instance part="U1" gate="A" x="5.08" y="81.28" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -2780,14 +2774,14 @@ part number 2062-2P from STA</description>
 <pinref part="U$6" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="25.4" y1="71.12" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="68.58" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="71.12" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="U$7" gate="G$1" pin="GND"/>
-<pinref part="BAT1" gate="G$1" pin="-"/>
 <wire x1="2.54" y1="60.96" x2="25.4" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="60.96" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
 <junction x="25.4" y="58.42"/>
+<pinref part="U1" gate="A" pin="GND"/>
+<wire x1="2.54" y1="69.85" x2="2.54" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="101.6" y1="73.66" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
@@ -2853,9 +2847,10 @@ part number 2062-2P from STA</description>
 <pinref part="IC1" gate="G$1" pin="EN"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <pinref part="L1" gate="G$1" pin="1"/>
-<pinref part="BAT" gate="G$1" pin="+"/>
 <wire x1="2.54" y1="86.36" x2="25.4" y2="86.36" width="0.1524" layer="91"/>
 <junction x="25.4" y="86.36"/>
+<pinref part="U1" gate="A" pin="VCC"/>
+<wire x1="2.54" y1="78.74" x2="2.54" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SW" class="0">
@@ -2885,12 +2880,6 @@ part number 2062-2P from STA</description>
 <label x="12.7" y="36.322" size="1.27" layer="95"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="Q1" gate="G$1" pin="GATE"/>
-</segment>
-</net>
-<net name="AAA" class="0">
-<segment>
-<pinref part="BAT" gate="G$1" pin="-"/>
-<pinref part="BAT1" gate="G$1" pin="+"/>
 </segment>
 </net>
 </nets>
